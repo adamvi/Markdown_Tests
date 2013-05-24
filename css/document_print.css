@@ -160,6 +160,7 @@ code {
 
 p {
   margin: 0 0 10px 0;
+  text-align:justify;
 }
 p.info {
   font-style: italic;
