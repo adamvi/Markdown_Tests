@@ -77,9 +77,15 @@
 #document h1 {
   counter-reset: sub-section;
   font-size: 30px;
+  border-top:none;
+  border-bottom:none;
+  text-transform:none;
 }
 #document h2 {
   counter-reset: composite;
+  border-top:none;
+  border-bottom:none;
+  text-transform:none;
 }
 #document h1:before {
   counter-increment: section;
