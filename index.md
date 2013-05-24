@@ -3,6 +3,7 @@ layout: report
 report_title: The Application of the SIMEX Method to the SGP Analysis
 report_abstract: Here is some text about the article - something like an abstract.  Prediction errors can be decomposed into two main subcomponents ...
 report_date: June 2013
+pdf.name: SIMEX-report-June-2013.pdf
 meta_title: Simex Simulations
 meta_subtitle: Report and Recommendations
 contents:
@@ -25,19 +26,20 @@ In the simulation study of the SGP analysis, however, each replication of the an
 
 We derive the following statistics to compare SGPs estimated with and without SIMEX.
 
-$$ \textit{Total MSE} = \frac{1}{n} \sum_{i=1}^n \frac{1}{R} \sum_{r=1}^R (\widehat{SGP}_{i,r} - SGP_i)^2$$
+$$ \textit{Total MSE} = \frac{1}{n} \sum_ {i=1}^n \frac{1}{R} \sum_ {r=1}^R (\widehat{SGP}_ {i,r} - SGP_i)^2$$
 
 Where $i=1, 2,\text{ ... },n$ indicates students, $r=1, 2,\text{ ... },R$ indicates simulation replications, $\widehat{SGP}_{i,r}$ denotes the estimated SGP (either with or without SIMEX) for student $\textit{i}$ in replication $\textit{r}$, and $SGP_i$ denotes the "true" SGP for student $\textit{i}$.
 
-$$ \textit{Mean Bias} = \frac{1}{n} \sum_{i=1}^n \frac{1}{R} \sum_{r=1}^R (\widehat{SGP}_{i,r} - SGP_i)$$
+$$ \textit{Mean Bias} = \frac{1}{n} \sum_ {i=1}^n \frac{1}{R} \sum_ {r=1}^R (\widehat{SGP}_ {i,r} - SGP_i)$$
 
-$$ \textit{SD Bias = Standard Deviation}_{\textit{ across }i} (\frac{1}{R} \sum_{r=1}^R \widehat{SGP}_{i,r} - SGP_i)$$
+$$ \textit{SD Bias = Standard Deviation}_ {\textit{ across }i} (\frac{1}{R} \sum_ {r=1}^R \widehat{SGP}_ {i,r} - SGP_i)$$
 
 *Total MSE* is a comprehensive standard which accounts for both bias and variability. *Mean Bias* is the bias averaged over students and replications, but since *Mean Bias* of either estimator is likely to be very close to 0, we also calculated *SD Bias*, which is derived by taking the difference between the estimated and the true SGPs averaged across replications, and then calculate the standard deviation of these differences across students. *SD Bias* may be a better indicator of the magnitude of bias than *Mean Bias*, just like Standard Error of Measurement is a better indicator of the magnitude of measurement errors than the mean, which is usually 0.
 
 ## Results <a id="SIMEX Method and Individual SGPs + Results"></a>
 The following table presents the results of the simulation study.
 
+{% comment %}<!--
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 |**Table 1.**          |             |             |             |             |              |              |
 |                      |             | SGP Without SIMEX |       |             |              |SGP With SIMEX|
@@ -47,6 +49,53 @@ The following table presents the results of the simulation study.
 | Grade 4 ~ Grade 3    |   362.980   |    0.019    |    8.004    |   393.244   |     -0.107    |    6.612    |
 | Grade 5 ~ Grade 4, 3 |   360.795   |   -0.001    |    7.512    |   379.277   |      0.088    |    6.602    |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
+-->{% endcomment %}
+
+**Table 1.**
+<div>
+<table class='gmisc_table' style='border-collapse: collapse;'>
+	<a name='Table 1.'></a>
+	<thead>
+	<tr>
+		<th style='font-weight: 900; border-top: 4px double grey;'></th>
+		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>SGP Without SIMEX</th><th style='border-top: 4px double grey;'>&nbsp;</th>
+		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>SGP With SIMEX</th>
+	</tr>
+	<tr>
+		<th style=';'>&nbsp;</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Total MSE</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Mean Bias</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>SD Bias</th>
+		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Total MSE</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Mean Bias</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>SD Bias</th>
+	</tr>
+	</thead><tbody>
+	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Analysis</td></tr>
+	<tr>
+		<td align='right' style=';'>Grade 4 | Grade 3</td>
+		<td align='right' style=';'>362.98</td>
+		<td align='right' style=';'> 0.02</td>
+		<td align='right' style=';'> 8.00</td>
+		<th style=';'>&nbsp;</th>
+		<td align='right' style=';'>393.24</td>
+		<td align='right' style=';'>-0.11</td>
+		<td align='right' style=';'> 6.61</td>
+	</tr>
+	<tr>
+		<td align='right' style='border-bottom: 1px solid grey;'>&nbsp;&nbsp;Grade 5 | Grade 4, 3</td>
+		<td align='right' style='border-bottom: 1px solid grey;'>360.80</td>
+		<td align='right' style='border-bottom: 1px solid grey;'>-0.00</td>
+		<td align='right' style='border-bottom: 1px solid grey;'> 7.51</td>
+		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+		<td align='right' style='border-bottom: 1px solid grey;'>379.28</td>
+		<td align='right' style='border-bottom: 1px solid grey;'> 0.09</td>
+		<td align='right' style='border-bottom: 1px solid grey;'> 6.60</td>
+	</tr>
+	</tbody>
+</table>
+</div>
 
 ### *Why Are the Total MSEs So Large?*
 The first thing we notice is that the total MSEs are all very large. The square roots of the MSEs, generally considered a measure of the average magnitude of errors, are around 60, far greater than the *Mean Bias* or the *SD Bias*. 
@@ -62,10 +111,11 @@ There is, however, something strange here. In earlier studies of the SIMEX metho
 
 ### *Why Doesn’t the SIMEX Method Perform Well in Correcting Individual SGP?*
 At the end of the measurement error report presented at the TAC Meeting in July, 2012, we raised the question about the validity of using the SIMEX method to correct individual level SGPs. The rationale is as follows. 
-Suppose we estimated this model $\hat{y}_ {GOOD}=a+bx_ {OBSERVED}$ where $x_ {OBSERVED} $ is measured with errors, but what we really want to estimate is $\hat{y}_ {BETTER}=\alpha+\beta x_ {TRUE}$. Now the SIMEX method, or any other measurement error correction, moves us from a and b closer to α and β, and often times the goal is achieved at this stage. But in the SGP analysis, simply obtaining α and β is not enough. To get more accurate SGPs, we need to obtain $\hat{y}_ {BETTER}$, which is not obtainable unless we have $x_ {TRUE}$. 
+Suppose we estimated this model $\hat{y}_ {GOOD}=a+bx_ {OBSERVED}$ where $x_ {OBSERVED}$ is measured with errors, but what we really want to estimate is $\hat{y}_ {BETTER}=\alpha+\beta x_ {TRUE}$. Now the SIMEX method, or any other measurement error correction, moves us from a and b closer to $\alpha$ and $\beta$, and often times the goal is achieved at this stage. But in the SGP analysis, simply obtaining $\alpha$ and $\beta$ is not enough. To get more accurate SGPs, we need to obtain $\hat{y}_ {BETTER}$, which is not obtainable unless we have $x_ {TRUE}$. 
 So, when estimating individual SGPs with SIMEX, what we estimated is roughly $\alpha+\beta x_ {TRUE}$, which is neither $\hat{y}_ {GOOD}$ nor $\hat{y}_ {BETTER}$. We were able to achieve some bias reduction, because the observed scores are usually not far from the true scores, but the effect is much discounted.
 To test this theory, we plugged the "true" scores into the SIMEX process. Table 2 presents the outcomes of SGP without SIMEX and with SIMEX combined with "true" scores from 100 simulation replications.
 
+{% comment %}<!--
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 |**Table 2.**          |             |             |             |             |             | SGP With SIMEX|
 |                      |             | SGP Without SIMEX |       |             |           | and "True" Score|
@@ -75,12 +125,59 @@ To test this theory, we plugged the "true" scores into the SIMEX process. Table 
 | Grade 4 ~ Grade 3    |   362.980   |    0.019    |     8.004   |   248.836   |     -0.428    |     5.652   |
 | Grade 5 ~ Grade 4, 3 |   360.795   |   -0.001    |     7.512   |   287.078   |     -0.057    |     6.225   |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
+-->{% endcomment %}
+
+**Table 2.**
+<div>
+<table class='gmisc_table' style='border-collapse: collapse;'>
+	<a name='Table 2.'></a>
+	<thead>
+	<tr>
+		<th style='font-weight: 900; border-top: 4px double grey;'></th>
+		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>SGP Without SIMEX</th><th style='border-top: 4px double grey;'>&nbsp;</th>
+		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>SGP With SIMEX and "True" Score</th>
+	</tr>
+	<tr>
+		<th style=';'>&nbsp;</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Total MSE</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Mean Bias</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>SD Bias</th>
+		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Total MSE</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Mean Bias</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>SD Bias</th>
+	</tr>
+	</thead><tbody>
+	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Analysis</td></tr>
+	<tr>
+		<td align='right' style=';'>Grade 4 | Grade 3</td>
+		<td align='right' style=';'>362.98</td>
+		<td align='right' style=';'> 0.02</td>
+		<td align='right' style=';'> 8.00</td>
+		<th style=';'>&nbsp;</th>
+		<td align='right' style=';'>287.78</td>
+		<td align='right' style=';'>-0.428</td>
+		<td align='right' style=';'> 5.65</td>
+	</tr>
+	<tr>
+		<td align='right' style='border-bottom: 1px solid grey;'>&nbsp;&nbsp;Grade 5 | Grade 4, 3</td>
+		<td align='right' style='border-bottom: 1px solid grey;'>360.80</td>
+		<td align='right' style='border-bottom: 1px solid grey;'>-0.00</td>
+		<td align='right' style='border-bottom: 1px solid grey;'> 7.51</td>
+		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+		<td align='right' style='border-bottom: 1px solid grey;'>379.28</td>
+		<td align='right' style='border-bottom: 1px solid grey;'>-0.57</td>
+		<td align='right' style='border-bottom: 1px solid grey;'> 6.23</td>
+	</tr>
+	</tbody>
+</table>
+</div>
 
 In Table 2, the SIMEX method greatly reduces both bias and MSE when used in combination with true scores. This shows that the fundamental reason for increased MSE in Table 1 is the use of SIMEX in combination with observed scores.
 
 ### *Can We Use Estimated True Scores?*
 Results in Table 2 are obviously not obtainable in reality. As per some TAC members’ suggestion, we tried plugging in the estimated true scores:
-$ X_ {\text{Est. True}}= \text{Reliability} \times (X_ {OBSERVED}-\bar{X}_ {OBSERVED})+\bar{X}_ {OBSERVED}$
+$X_ {\text{Est. True}}= \text{Reliability} \times (X_ {OBSERVED}-\bar{X}_ {OBSERVED})+\bar{X}_ {OBSERVED}$
 The results we obtained are almost exactly the same as those in Table 1, which suggests that the inaccessibility of the true scores is a problem that is insurmountable.
 
 ### *Conclusion*
@@ -115,6 +212,7 @@ There are two possible ways to implement SIMEX on aggregated SGPs. The first way
 ###  *SIMEX, then Aggregate*
 We set up the simulation study similarly as that described in 1.1, except that this simulation is based on a different data set—sgpData_LONG, which contains school numbers. We calculated the total MSE, the Mean Bias, and the SD Bias, defined similarly as in equations (1), (2), and (3). The total MSE is the squared difference between estimated and “true” MGPs averaged across schools and replications; the Mean Bias is the difference between estimated and “true” MGPs averaged across schools and replications; and the SD Bias is the standard deviation across schools of the difference between estimated and “true” MGPs averaged across 100 replications. Results from the Reading test in Grades 4 and 5 conditioning on 1 and 2 priors respectively are presented in Table 3.
 
+{% comment %}<!--
 |----------------------+-------------+-------------+-------------+-------------+-------------+-------------|
 |**Table 3.**          |             |             |             |             |             |             |
 |                      |         | Mean School SGP |             |             |       | Median School SGP |
@@ -131,13 +229,75 @@ We set up the simulation study similarly as that described in 1.1, except that t
 | Without SIMEX        |    5.948    |    -0.263    |   2.433    |   27.101    |   -0.266    |    5.199    |
 | With SIMEX           |    4.519    |     0.094    |   2.125    |   25.679    |    0.084    |    5.060    |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-----------|
+-->{% endcomment %}
 
+**Table 3.** 
+<div>
+<table class='gmisc_table' style='border-collapse: collapse;'>
+	<a name='Table 3.'></a>
+	<thead>
+	<tr>
+		<th style='font-weight: 900; border-top: 4px double grey;'></th>
+		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Man School SGP</th><th style='border-top: 4px double grey;'>&nbsp;</th>
+		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Median School SGP</th>
+	</tr>
+	<tr>
+		<th style=';'>&nbsp;</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Total MSE</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Mean Bias</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>SD Bias</th>
+		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Total MSE</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>Mean Bias</th>
+		<th align='center' style='border-bottom: 1px solid grey;'>SD Bias</th>
+	</tr>
+	</thead><tbody>
+	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Grade 4 | Grade 3</td></tr>
+	<tr>
+		<td align='right' style=';'>Without SIMEX </td>
+		<td align='right' style=';'>5.57</td>
+		<td align='right' style=';'> -0.20</td>
+		<td align='right' style=';'> 2.36</td>
+		<th style=';'>&nbsp;</th>
+		<td align='right' style=';'>26.37</td>
+		<td align='right' style=';'>-0.10</td>
+		<td align='right' style=';'> 5.14</td>
+	</tr>
+	<tr>
+		<td align='right' style=';'>With SIMEX </td>
+		<td align='right' style=';'>4.74</td>
+		<td align='right' style=';'>-0.08</td>
+		<td align='right' style=';'> 2.18</td>
+		<th style=';'>&nbsp;</th>
+		<td align='right' style=';'>28.36</td>
+		<td align='right' style=';'> 0.03</td>
+		<td align='right' style=';'> 5.33</td>
+	</tr>
+	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Grade 5 | Grade 4, 3</td></tr>
+	<tr>
+		<td align='right' style=';'>Without SIMEX </td>
+		<td align='right' style=';'>5.95</td>
+		<td align='right' style=';'>-0.26</td>
+		<td align='right' style=';'> 2.43</td>
+		<th style=';'>&nbsp;</th>
+		<td align='right' style=';'>27.10</td>
+		<td align='right' style=';'>-0.27</td>
+		<td align='right' style=';'> 5.20</td>
+	</tr>
+	<tr>
+		<td align='right' style=';'>With SIMEX </td> 
+		<td align='right' style=';'>4.52</td>
+		<td align='right' style=';'> 0.09</td>
+		<td align='right' style=';'> 2.13</td>
+		<th style=';'>&nbsp;</th>
+		<td align='right' style=';'>25.68</td>
+		<td align='right' style=';'> 0.08</td>
+		<td align='right' style=';'> 5.06</td>
+	</tr>
+	</tbody>
+</table>
+</div>
 
+Table 3 shows that the SIMEX method is able to reduce mean square error at the aggregated level, especially for mean SGPs. 
 
-
-
-
-
-
-
-
+###  Aggregate, then SIMEX
